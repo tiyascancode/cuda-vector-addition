@@ -1,4 +1,4 @@
-<img width="890" height="385" alt="image" src="https://github.com/user-attachments/assets/109a6365-7970-4824-beb2-7ea2fa0f1d2f" /># Simple CUDA Vector Addition Benchmark
+# Simple CUDA Vector Addition Benchmark
 
 A quick side-by-side benchmark comparing a sequential C++ vector addition against a custom CUDA kernel on $50,000,000$ elements.
 
