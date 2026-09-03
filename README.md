@@ -25,17 +25,18 @@ I built this project to get hands-on experience with basic CUDA memory managemen
 | **Total GPU Runtime** | `130.48 ms` | Includes PCIe transfers (`cudaMemcpy`) |
 
 ### Key Takeaway
-Isolating the kernel execution shows a **~22x speedup** on raw computation compared to the CPU loop. However, total GPU runtime is dominated by copying data over the PCIe bus (`cudaMemcpy`). Because vector addition requires minimal arithmetic per byte loaded, transfer latency is the main bottleneck here—a classic example of a memory-bound workload.
+Isolating the kernel execution shows a **~22x speedup** on raw computation compared to the CPU loop. However, total GPU runtime is dominated by copying data over the PCIe bus (`cudaMemcpy`). Because vector addition requires minimal arithmetic per byte loaded, transfer latency is the main bottleneck here, a classic example of a memory-bound workload.
 
 ---
 
 ## Building and Running
 
-### CPU
+**CPU**
 ```bash
 g++ -O3 vector_add_cpu.cpp -o cpu_add
 ./cpu_add
 
-### CUDA
+**CUDA**
+```bash
 nvcc vector_add_cuda.cu -o cuda_add
 ./cuda_add
