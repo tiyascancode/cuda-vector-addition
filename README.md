@@ -1,4 +1,4 @@
-# Simple CUDA Vector Addition Benchmark
+<img width="890" height="385" alt="image" src="https://github.com/user-attachments/assets/109a6365-7970-4824-beb2-7ea2fa0f1d2f" /># Simple CUDA Vector Addition Benchmark
 
 A quick side-by-side benchmark comparing a sequential C++ vector addition against a custom CUDA kernel on $50,000,000$ elements.
 
@@ -35,8 +35,10 @@ Isolating the kernel execution shows a **~22x speedup** on raw computation compa
 ```bash
 g++ -O3 vector_add_cpu.cpp -o cpu_add
 ./cpu_add
+```
 
 **CUDA**
 ```bash
 nvcc vector_add_cuda.cu -o cuda_add
 ./cuda_add
+```
